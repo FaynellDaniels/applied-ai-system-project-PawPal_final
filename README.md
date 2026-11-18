@@ -16,7 +16,7 @@
 - 🐕 **Add pets by chatting**: "add a dog named Buddy and put him on the schedule for a walk on nov 20th at 8am"
 - 📅 **Calendar tab** (month view), 🐾 **a tab per pet**, 🖨 **typewriter schedule**
 - 🐶 **Sleeping dog in the corner**: tap it, the chat opens, the dog walks around
-- ✨ **Cute-style sky**: twinkling stars, light motes, clouds, all drawn in CSS (no emojis)
+- ✨ **Cute-style sky**: twinkling stars, light motes, clouds, all in CSS 
 
 ## 🧠 Architecture overview
 Source: [`diagrams/architecture.mmd`](diagrams/architecture.mmd). Paste it into [mermaid.live](https://mermaid.live) to view.
