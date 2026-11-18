@@ -4,13 +4,12 @@
 |---|---|---|---|
 | ![calendar](assets/1-calendar-and-chat.png) | ![typewriter](assets/2-typewriter.png) | ![pet tab](assets/3-pet-tab.png) | ![sky](assets/4-ghibli-sky.png) |
 
-## 🌸 Title and summary
 **PawPal+ is a pet-care planner you can talk to.** Chat with the sleepy dog in the corner: it adds pets, puts tasks on a calendar, tells you what each pet is doing today, and answers care questions, using **RAG** (it *retrieves* care guidelines and your own calendar before it answers). Your day then prints on a little typewriter.
 
 **Why it matters:** pet care is lots of small, easy-to-forget jobs (meals, meds, walks, vet visits). PawPal turns one plain sentence into scheduled tasks, fills in sensible durations and times from care guidelines, and keeps same-time tasks apart, so nothing gets missed.
 
 ## 🌱 Base project
-**PawPal+ ** was a Streamlit app built with Python classes (`Owner → Pet → Task` plus a `Scheduler`). It let you add pets and tasks, sort them by time, spot same-time conflicts, repeat daily/weekly tasks, and build a plan that fits your free time. All of that is still here and still tested.
+**PawPal+** was a Streamlit app built with Python classes (`Owner → Pet → Task` plus a `Scheduler`). It let you add pets and tasks, sort them by time, spot same-time conflicts, repeat daily/weekly tasks, and build a plan that fits your free time. All of that is still here and still tested.
 
 **What the final project adds:**
 - 💬 **AI chat (RAG)** that reads care guidelines *and* your calendar
@@ -170,7 +169,7 @@ PawPal: Hmm, I don't know about that yet. Try asking what a pet is doing today, 
 ## 🤔 Design decisions
 | Decision | Why | Trade-off |
 |---|---|---|
-| **Keyword retrieval, no language model** | Free, offline, predictable, easy to explain and test. Anyone who clones the repo can run it with no API key. | It only knows 14 topics and can't understand unusual wording. |
+| **Keyword retrieval, no language model** | Free, offline, predictable, easy to explain and test. | It only knows 14 topics and can't understand unusual wording. |
 | **Retrieve from the calendar too, not just guidelines** | So the chat can answer "what is Buddy doing today?" from real data. | Slightly more code in `rag.py`. |
 | **Reuse the original `Scheduler`** | It already sorted tasks and found conflicts, and was tested. | Its conflict check only catches same-start-time tasks, not overlapping durations. |
 | **Chat edits your data directly, but visibly** | Fast and simple; every change is shown in the reply and can be deleted in the pet's tab. | No "are you sure?" step. |
