@@ -1,4 +1,4 @@
-# Model Card: PawPal+ Chat
+# Model Card: PawPal+ 
 
 ## 1. What it is
 A small **RAG chatbot** for pet care. For each message it **retrieves** from two places:
@@ -55,10 +55,8 @@ Reproduce with `pytest -v` (full output is in the README) and `python demo.py`.
 - **The boring tests mattered most.** Empty input, no pets and unknown topics each needed their own handling, and none of them show up in a happy-path demo.
 
 ## 6. Collaboration with AI
-I built this with some Claude Code mostly for the look of the app, I did most of it by myself but it also did help with testcases and making a plan of what to keep and what to improve. It inspected my existing files first, then I wrote code, ran the tests and took screenshots, while I also set the goals and, the look (lavender and pink, the typewriter,the Ghibli sky) and decided what was too much.
+I built this with some Claude Code mostly for the look of the app, I did most of it by myself but it also did help with test cases and making a plan of what to keep and what to improve. It inspected my existing files first, then I wrote code, ran the tests and took screenshots, while I also set the goals and the look (lavender and pink, the typewriter, the Cute sky) and decided what was too much.
 
 **One suggestion I accepted: reuse my existing `Scheduler` and data classes.** Instead of writing new scheduling code,  the chat suggested building on top of `Owner`, `Pet`, `Task` and `Scheduler`. I accepted it because those classes were already tested, so the I only needed to *create tasks*. The calendar, conflict warnings and tick-offs all work without new logic.
 
-**One suggestion I did not accept as written: the big "agent" version.** The AI's first version suggested a large planner with a plan → verify → repair loop, a logger, optional language-model parsing, and a custom pixel-art theme, spread over many files. It  was far too long and complicated. I asked for a much simpler version, something that would push me but also something I could get done.
-
-
+**One suggestion I did not accept as written: the big "agent" version.** The AI's first suggested a larger idea with a plan → verify → repair loop, a logger, optional language-model parsing, and a custom pixel-art theme, spread over many files. It  was far too long and complicated. I asked for a much simpler version, something that would push me but also something I could get done.
