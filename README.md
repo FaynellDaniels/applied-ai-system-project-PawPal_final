@@ -1,6 +1,6 @@
 # 🐾 PawPal+ ♡ your cozy pet-care buddy
 
-| Calendar + the dog's chat | Typewriter schedule | A pet's own tab | Ghibli-style sky |
+| Calendar + the dog's chat | Typewriter schedule | A pet's own tab | Cute-style sky |
 |---|---|---|---|
 | ![calendar](assets/1-calendar-and-chat.png) | ![typewriter](assets/2-typewriter.png) | ![pet tab](assets/3-pet-tab.png) | ![sky](assets/4-ghibli-sky.png) |
 
@@ -16,7 +16,7 @@
 - 🐕 **Add pets by chatting**: "add a dog named Buddy and put him on the schedule for a walk on nov 20th at 8am"
 - 📅 **Calendar tab** (month view), 🐾 **a tab per pet**, 🖨 **typewriter schedule**
 - 🐶 **Sleeping dog in the corner**: tap it, the chat opens, the dog walks around
-- ✨ **Ghibli-style sky**: twinkling stars, light motes, clouds, all drawn in CSS (no emojis)
+- ✨ **Cute-style sky**: twinkling stars, light motes, clouds, all drawn in CSS (no emojis)
 
 ## 🧠 Architecture overview
 Source: [`diagrams/architecture.mmd`](diagrams/architecture.mmd). Paste it into [mermaid.live](https://mermaid.live) to view.
@@ -113,8 +113,7 @@ classDiagram
 
 ## 🚀 Setup instructions
 ```bash
-# 1. go into the project folder
-cd ai110-module2show-pawpal-starter
+# 1. Clone Repo
 
 # 2. make and activate a virtual environment
 python -m venv .venv
