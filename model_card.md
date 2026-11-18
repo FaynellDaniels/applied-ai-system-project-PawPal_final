@@ -11,23 +11,6 @@ then **builds its reply or new tasks from what it found**. It is keyword retriev
 
 ## 2. Testing results
 Reproduce with `pytest -v` (full output is in the README) and `python demo.py`.
-
-| Test input | What I checked | Result |
-|---|---|---|
-| "what should I feed my cat?" | Only the cat answers, using the retrieved tip | Pass |
-| "build a routine for my dog and cat" | 8 tasks added, 0 same-time conflicts | Pass |
-| "add a walk for Buddy at 5pm" | Task created at 17:00 | Pass |
-| "add a walk for Buddy at 5pm on nov 20" | Task lands on Nov 20 | Pass |
-| "what is Buddy doing today?" | Lists only Buddy's real tasks for that day | Pass |
-| "what is Mochi doing?" (nothing planned) | Says there is nothing planned | Pass |
-| "add a dog named buddy … walk on nov 20th at 8am" | Pet created, walk on Nov 20 at 8:00 | Pass |
-| "I got a new kitten called Luna" | Pet added as a cat, no task invented | Pass |
-| "add a dog named Buddy" twice | No duplicate pet | Pass |
-| "add a bunny named Clover and build a routine" | Saved as species "other", gets tasks | Pass |
-| Same routine requested twice | No duplicate tasks | Pass |
-| Empty message / no pets / "quantum physics" | Friendly reply, no crash | Pass |
-| Original PawPal tests (sorting, recurring tasks, conflicts) | Still work | Pass |
-
 **25 of 25 pytest tests pass.** 
 
 ## 3. Limitations and biases
