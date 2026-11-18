@@ -6,9 +6,14 @@ You are building **PawPal+**, a Streamlit app that helps a pet owner plan care t
 
 A busy pet owner needs help staying consistent with pet care. They want an assistant that can:
 
+<<<<<<< HEAD
 - Track pet care tasks (walks, feeding, meds, enrichment, grooming, etc.)
 - Consider constraints (time available, priority, owner preferences)
 - Produce a daily plan and explain why it chose that plan
+=======
+## 🌱 Base project
+**PawPal+ ** was a Streamlit app built with Python classes (`Owner → Pet → Task` plus a `Scheduler`). It let you add pets and tasks, sort them by time, spot same-time conflicts, repeat daily/weekly tasks, and build a plan that fits your free time. All of that is still here and still tested.
+>>>>>>> 49924e6 (:README final edits)
 
 Your job is to design the system first (UML), then implement the logic in Python, then connect it to the Streamlit UI.
 
@@ -30,6 +35,45 @@ Your final app should:
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
+<<<<<<< HEAD
+=======
+
+# 4. run the app, it opens in your browser
+streamlit run app.py
+```
+ Then: pick a date → add a pet in the sidebar (or just tap the sleeping dog and chat) → open the **🖨 Schedule** tab and press **Print**.
+
+Optional: `pytest` runs the tests, and `python demo.py` prints the sample chat below.
+
+## 💬 Sample interactions
+Real, unedited output of `python demo.py` (re-run it to reproduce):
+
+```text
+You:    add a dog named Buddy and put him on the schedule for a walk on nov 20th at 8am
+PawPal: Added **Buddy** (dog) to your pets. They have their own tab now 🐾
+
+Added **Morning walk** for Buddy on Nov 20 at 08:00 AM (30 min) 📅
+
+You:    add a cat named Mochi
+PawPal: Added **Mochi** (cat) to your pets. They have their own tab now 🐾
+
+Want a routine for them? Say “build a routine for Mochi”.
+
+You:    build a routine for Mochi on nov 18
+PawPal: Done! I looked up care guidelines for Mochi and added 4 tasks to Nov 18. Open the **🖨 Schedule** tab to watch the typewriter ✨
+
+You:    what is Buddy doing on nov 20?
+PawPal: **Buddy** on Nov 20:
+- 08:00 AM · Morning walk (30 min)
+
+You:    what should I feed my cat?
+PawPal: **Mochi · Breakfast:** Cats usually prefer 2-3 small meals; always leave fresh water out. (about 5 min, around 07:30 AM)
+
+**Mochi · Dinner:** Wet food should not sit out longer than about 30 minutes. (about 5 min, around 06:00 PM)
+
+You:    quantum physics
+PawPal: Hmm, I don't know about that yet. Try asking what a pet is doing today, or about feeding, walks, play, medication, grooming, litter or vet visits 💜
+>>>>>>> 49924e6 (:README final edits)
 ```
 
 ### Suggested workflow
@@ -47,6 +91,7 @@ The implementation builds the PawPal system using several classes that work toge
 
 ## 🖥️ Sample Output
 
+<<<<<<< HEAD
 Paste a sample of your app's CLI or Streamlit output here so a reader can see what a generated plan looks like:
 
 ```
@@ -65,6 +110,26 @@ Paste a sample of your app's CLI or Streamlit output here so a reader can see wh
 ```
 
 ## 🧪 Testing PawPal+
+=======
+```text
+================================== test session starts   ===================================
+platform darwin -- Python 3.13.15, pytest-9.2.0, pluggy-1.7.0
+rootdir: /Users/nellie/Desktop/cd applied-ai-system-final/ai110-module2show-pawpal-starter
+configfile: pytest.ini
+testpaths: tests
+plugins: anyio-4.16.0
+collected 25 items                                                                       
+
+tests/test_pawpal.py ..........                                                    [ 40%]
+tests/test_rag.py ...............                                                  [100%]
+
+=================================== 25 passed in 0.03s ===================================
+```
+
+**What worked:** tests caught real bugs early. The date "nov 20th" didn't parse at first, and a test about "today" showed the chat uses the real today, not the calendar's selected date.
+**What didn't / limits:** the chat only knows 14 topics, and the tests cover the logic, not how the page looks. 
+**What I learned:** testing the boring cases (empty input, no pets, unknown topic) matters as much as testing the happy path.
+>>>>>>> 49924e6 (:README final edits)
 
 ```bash
 # Run the full test suite:
