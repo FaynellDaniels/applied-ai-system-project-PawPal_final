@@ -1,0 +1,79 @@
+classDiagram
+    class Owner {
+        +String name
+        +List~Pet~ pets
+        +add_pet()
+        +get_all_tasks()
+    }
+
+    class Pet {
+        +String name
+        +String species
+        +List~Task~ tasks
+        +add_task()
+        +remove_task()
+    }
+
+    class Task {
+        +String description
+        +Time due_time
+        +Date due_date
+        +Integer duration
+        +Integer priority
+        +String frequency
+        +Boolean completed
+        +Boolean required
+        +mark_complete()
+        +next_occurrence()
+    }
+
+    class Scheduler {
+        +Owner owner
+        +get_pending_tasks()
+        +sort_by_time()
+        +filter_tasks()
+        +find_conflicts()
+        +prioritize_tasks()
+        +generate_plan()
+        +mark_task_complete()
+    }
+
+    class Guideline {
+        +String id
+        +String title
+        +List~String~ keywords
+        +List~String~ species
+        +Integer default_duration
+        +Integer priority
+        +Boolean required
+        +String preferred_time
+        +String tip
+    }
+
+    class RAG {
+        +retrieve()
+        +find_time()
+        +find_day()
+        +make_task()
+        +agenda()
+        +reply()
+    }
+
+    class StreamlitApp {
+        +Calendar tab
+        +Schedule tab
+        +Pet tabs
+        +Dog chat window
+        +typewriter print
+    }
+
+    Owner "1" --> "0..*" Pet : has
+    Pet "1" *-- "0..*" Task : has
+    Scheduler --> Owner : plans for
+    RAG "1" o-- "14" Guideline : retrieves from knowledge JSON
+    RAG --> Owner : reads calendar tasks
+    RAG --> Pet : adds tasks to
+    RAG ..> Task : creates
+    StreamlitApp --> RAG : chat message
+    StreamlitApp --> Scheduler : sorts and checks conflicts
+    StreamlitApp --> Owner : shows calendar and tabs

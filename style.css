@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&family=Courier+Prime:wght@400;700&display=swap');
+
+/* colors: lavender, dusty pink, cream */
+.stApp { background: linear-gradient(160deg, #fbe0ea 0%, #ead9f7 100%); }
+[data-testid="stSidebar"] { background: #f4e8fb; border-right: 3px solid #d9b8e8; }
+.block-container { padding-top: 2rem; max-width: 1150px; }
+
+/* fonts (only text elements, so icons keep working) */
+h1, h2, h3, p, label, input, textarea, button, li { font-family: 'Nunito', sans-serif !important; }
+h1, h2, h3 { color: #6b3f6e !important; font-weight: 800 !important; }
+p, label, li { color: #5b3a5e; }
+
+/* buttons */
+.stButton > button, .stFormSubmitButton > button {
+  background: #e9b5cf; color: #5b3a5e; border: none; border-radius: 20px; font-weight: 800; padding: .4rem 1.2rem; }
+.stButton > button:hover, .stFormSubmitButton > button:hover { background: #c9a9ea; color: #fff; }
+
+/* tabs */
+.stTabs [data-baseweb="tab"] { background: #fff5fa; border-radius: 14px 14px 0 0; margin-right: 6px; padding: .5rem 1.1rem; }
+.stTabs [aria-selected="true"] { background: #f3b6cf; }
+.stTabs [data-baseweb="tab"] p { font-weight: 800; color: #5b3a5e; }
+.stTabs [data-baseweb="tab-highlight"] { background: #b985c9; }
+
+/* ---------- calendar ---------- */
+.cal { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; }
+.cal .dow { text-align: center; font-weight: 800; color: #8a5a96; font-size: .9rem; }
+.cal .cell { background: #fffaf5; border-radius: 10px; padding: 4px 6px; min-height: 96px; overflow: hidden;
+  border: 2px solid transparent; }
+.cal .cell.other { opacity: .45; }
+.cal .cell.sel { border-color: #b985c9; background: #fff0f7; }
+.cal .num { font-weight: 800; font-size: .85rem; color: #6b3f6e; display: inline-block; min-width: 1.5rem; text-align: center; }
+.cal .today .num { background: #e9b5cf; border-radius: 50%; }
+.cal .pill { font-size: .72rem; background: #e6d5f7; border-radius: 6px; padding: 1px 5px; margin-top: 2px;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: #4b2f50; }
+.cal .pill.req { background: #f7c9dd; }
+.cal .more { font-size: .7rem; color: #8a5a96; }
+
+/* ---------- typewriter ---------- */
+.paper { background: #fffaf0; border: 2px solid #d9b8e8; border-bottom: none; border-radius: 10px 10px 0 0;
+  padding: 1.2rem 1.5rem 2.2rem; font-family: 'Courier Prime', monospace; color: #5b3a5e;
+  max-width: 520px; margin: 0 auto -18px; box-shadow: 0 4px 14px rgba(120, 70, 140, .15); }
+.paper .line { font-size: 1rem; line-height: 1.7; white-space: nowrap; overflow: hidden; width: 100%; }
+.paper .title { font-weight: 700; font-size: 1.15rem; border-bottom: 2px dashed #d9b8e8; margin-bottom: .4rem; }
+.paper.animate .line { width: 0; animation: type 1.2s steps(40) forwards; }
+@keyframes type { to { width: 100%; } }
+.machine { max-width: 560px; margin: 0 auto 1rem; background: #f3b6cf; border: 3px solid #b985c9; border-radius: 18px;
+  padding: .7rem 1rem 1rem; text-align: center; color: #5b3a5e; font-weight: 800; position: relative; z-index: 1;
+  box-shadow: 0 6px 0 #d99ab5; }
+.machine .keys { letter-spacing: .5rem; color: #fff; font-size: 1.1rem; }
+
+/* ---------- the dog in the corner ---------- */
+[class*="st-key-dog_"] { position: fixed; bottom: 18px; right: 24px; z-index: 1002; width: auto !important; }
+[class*="st-key-dog_"] button { width: 78px; height: 78px; border-radius: 50%; background: #fff;
+  border: 3px solid #d9b8e8; box-shadow: 0 4px 12px rgba(120, 70, 140, .3); position: relative; padding: 0; }
+[class*="st-key-dog_"] button:hover { background: #fff0f7; transform: scale(1.06); }
+[class*="st-key-dog_"] button p { font-size: 2.3rem; margin: 0; line-height: 1; }
+.st-key-dog_sleep button::after { content: "z z z"; position: absolute; top: -16px; right: -4px; font-size: .85rem;
+  font-weight: 800; color: #8a5a96; animation: zzz 2.4s ease-in-out infinite; }
+@keyframes zzz { 0%, 100% { opacity: .2; transform: translateY(6px); } 50% { opacity: 1; transform: translateY(-4px); } }
+
+/* the dog walking around the bottom of the page while chat is open */
+.walker { position: fixed; bottom: 4px; left: 2%; font-size: 2.6rem; z-index: 1001; pointer-events: none;
+  animation: walk 20s linear infinite; }
+.walker span { display: inline-block; animation: bounce .5s steps(2) infinite; }
+@keyframes walk {
+  0%   { left: 2%;  transform: scaleX(1); }
+  47%  { left: 78%; transform: scaleX(1); }
+  50%  { left: 78%; transform: scaleX(-1); }
+  97%  { left: 2%;  transform: scaleX(-1); }
+  100% { left: 2%;  transform: scaleX(1); } }
+@keyframes bounce { to { transform: translateY(-5px); } }
+
+/* the chat window that pops up above the dog */
+.st-key-chatpanel { position: fixed; bottom: 110px; right: 24px; width: 380px; max-width: 92vw; z-index: 1000;
+  background: #fff9fc; border: 3px solid #d9b8e8; border-radius: 22px; padding: 14px 16px;
+  box-shadow: 0 8px 28px rgba(120, 70, 140, .3); }
+.st-key-chatpanel h3 { font-size: 1.1rem !important; margin: 0 0 .3rem; }
+[data-testid="stChatMessage"] { background: #fff; border-radius: 14px; border: 1px solid #ecd0e0; }
+
+/* make sure all page text uses the friendly font (not the browser default) */
+.stApp, .stMarkdown, .cal, .cal div, [data-baseweb="tab"] { font-family: 'Nunito', sans-serif; }
+.paper, .paper .line, .machine { font-family: 'Courier Prime', monospace !important; }
+[data-testid="stToast"] { display: none; }
+
+/* ---------- Ghibli-style sky: twinkling stars, floating light motes, soft clouds (all drawn with CSS) ---------- */
+.sky { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden;
+  filter: drop-shadow(0 0 4px #fff) drop-shadow(0 0 9px rgba(185, 133, 201, .85)); }
+.sky i { position: absolute; background: #fff; opacity: 0;
+  clip-path: polygon(50% 0%, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0% 50%, 40% 40%);
+  animation: twinkle 4s ease-in-out infinite; }
+.sky u { position: absolute; bottom: -20px; border-radius: 50%; opacity: 0; text-decoration: none;
+  background: radial-gradient(circle, #fff 0%, rgba(255, 240, 250, .8) 35%, rgba(255, 255, 255, 0) 70%);
+  animation: rise 20s linear infinite; }
+.sky b { position: absolute; left: -40vw; height: 60px; border-radius: 60px; background: rgba(255, 255, 255, .55);
+  box-shadow: 40px -22px 0 12px rgba(255, 255, 255, .5), 90px -6px 0 4px rgba(255, 255, 255, .5), -30px 6px 0 -4px rgba(255, 255, 255, .45);
+  filter: blur(3px); animation: drift 120s linear infinite; }
+@keyframes twinkle { 0%, 100% { opacity: 0; transform: scale(.3) rotate(0deg); }
+                     50% { opacity: .95; transform: scale(1) rotate(45deg); } }
+@keyframes rise { 0% { transform: translate(0, 0); opacity: 0; } 15% { opacity: .85; }
+                  100% { transform: translate(40px, -110vh); opacity: 0; } }
+@keyframes drift { from { transform: translateX(0); } to { transform: translateX(190vw); } }
+@media (prefers-reduced-motion: reduce) { .sky i, .sky u, .sky b { animation: none; opacity: .5; } }

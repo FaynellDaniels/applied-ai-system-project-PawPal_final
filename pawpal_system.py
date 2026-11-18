@@ -21,6 +21,7 @@ class Task:
     frequency: str = "once"       # "once", "daily", "weekly", ...
     due_date: date | None = None  # which day it is due
     completed: bool = False
+    required: bool = False        # must be in the plan (e.g. medication, vet)
 
     def mark_complete(self):
         """Mark this task as done."""

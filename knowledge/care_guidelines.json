@@ -1,0 +1,311 @@
+[
+  {
+    "id": "dog_breakfast",
+    "group": "feeding",
+    "title": "Breakfast",
+    "keywords": [
+      "breakfast",
+      "feed",
+      "feeding",
+      "food",
+      "meal",
+      "morning meal"
+    ],
+    "species": [
+      "dog"
+    ],
+    "default_duration": 10,
+    "priority": 3,
+    "required": true,
+    "preferred_time": "07:30",
+    "routine": true,
+    "tip": "Adult dogs do best with two measured meals about 12 hours apart."
+  },
+  {
+    "id": "dog_dinner",
+    "group": "feeding",
+    "title": "Dinner",
+    "keywords": [
+      "dinner",
+      "supper",
+      "feed",
+      "feeding",
+      "food",
+      "meal",
+      "evening meal"
+    ],
+    "species": [
+      "dog"
+    ],
+    "default_duration": 10,
+    "priority": 3,
+    "required": true,
+    "preferred_time": "18:00",
+    "routine": true,
+    "tip": "Keep meals consistent; avoid hard exercise right after eating."
+  },
+  {
+    "id": "cat_breakfast",
+    "group": "feeding",
+    "title": "Breakfast",
+    "keywords": [
+      "breakfast",
+      "feed",
+      "feeding",
+      "food",
+      "meal",
+      "morning meal"
+    ],
+    "species": [
+      "cat"
+    ],
+    "default_duration": 5,
+    "priority": 3,
+    "required": true,
+    "preferred_time": "07:30",
+    "routine": true,
+    "tip": "Cats usually prefer 2-3 small meals; always leave fresh water out."
+  },
+  {
+    "id": "cat_dinner",
+    "group": "feeding",
+    "title": "Dinner",
+    "keywords": [
+      "dinner",
+      "supper",
+      "feed",
+      "feeding",
+      "food",
+      "meal",
+      "evening meal"
+    ],
+    "species": [
+      "cat"
+    ],
+    "default_duration": 5,
+    "priority": 3,
+    "required": true,
+    "preferred_time": "18:00",
+    "routine": true,
+    "tip": "Wet food should not sit out longer than about 30 minutes."
+  },
+  {
+    "id": "other_feeding",
+    "group": "feeding",
+    "title": "Feeding",
+    "keywords": [
+      "feed",
+      "feeding",
+      "food",
+      "meal",
+      "breakfast",
+      "dinner"
+    ],
+    "species": [
+      "other"
+    ],
+    "default_duration": 10,
+    "priority": 3,
+    "required": true,
+    "preferred_time": "08:00",
+    "routine": true,
+    "tip": "Small pets need fresh food and water every day; check species-specific diets."
+  },
+  {
+    "id": "dog_walk",
+    "group": "walk",
+    "title": "Morning walk",
+    "keywords": [
+      "walk",
+      "walkies",
+      "stroll",
+      "exercise",
+      "morning"
+    ],
+    "species": [
+      "dog"
+    ],
+    "default_duration": 30,
+    "priority": 3,
+    "required": false,
+    "preferred_time": "08:00",
+    "routine": true,
+    "tip": "Most adult dogs need 30-60 minutes of exercise a day."
+  },
+  {
+    "id": "dog_evening_walk",
+    "group": "walk",
+    "title": "Evening walk",
+    "keywords": [
+      "evening",
+      "walk",
+      "stroll",
+      "exercise",
+      "night"
+    ],
+    "species": [
+      "dog"
+    ],
+    "default_duration": 20,
+    "priority": 2,
+    "required": false,
+    "preferred_time": "17:30",
+    "routine": true,
+    "tip": "A shorter evening walk gives a bathroom break before bedtime."
+  },
+  {
+    "id": "dog_play",
+    "group": "play",
+    "title": "Play session",
+    "keywords": [
+      "play",
+      "fetch",
+      "toy",
+      "playtime",
+      "tug"
+    ],
+    "species": [
+      "dog"
+    ],
+    "default_duration": 15,
+    "priority": 2,
+    "required": false,
+    "preferred_time": "19:00",
+    "routine": false,
+    "tip": "Short play sessions build bonding and burn off extra energy."
+  },
+  {
+    "id": "cat_play",
+    "group": "play",
+    "title": "Play session",
+    "keywords": [
+      "play",
+      "playtime",
+      "toy",
+      "wand",
+      "enrichment",
+      "chase"
+    ],
+    "species": [
+      "cat"
+    ],
+    "default_duration": 15,
+    "priority": 2,
+    "required": false,
+    "preferred_time": "17:00",
+    "routine": true,
+    "tip": "Two 10-15 minute play sessions a day keep indoor cats active."
+  },
+  {
+    "id": "cat_litter",
+    "group": "litter",
+    "title": "Litter box scoop",
+    "keywords": [
+      "litter",
+      "scoop",
+      "box",
+      "cleanup"
+    ],
+    "species": [
+      "cat"
+    ],
+    "default_duration": 5,
+    "priority": 2,
+    "required": false,
+    "preferred_time": "09:00",
+    "routine": true,
+    "tip": "Scoop daily; most cats avoid a dirty litter box."
+  },
+  {
+    "id": "other_enrichment",
+    "group": "play",
+    "title": "Enrichment & handling",
+    "keywords": [
+      "enrichment",
+      "play",
+      "cuddle",
+      "handle",
+      "handling",
+      "playtime"
+    ],
+    "species": [
+      "other"
+    ],
+    "default_duration": 15,
+    "priority": 2,
+    "required": false,
+    "preferred_time": "17:00",
+    "routine": true,
+    "tip": "Small pets need daily out-of-cage time and gentle handling."
+  },
+  {
+    "id": "medication",
+    "group": "medication",
+    "title": "Give medication",
+    "keywords": [
+      "medication",
+      "meds",
+      "medicine",
+      "pill",
+      "pills",
+      "dose",
+      "insulin",
+      "tablet"
+    ],
+    "species": [
+      "any"
+    ],
+    "default_duration": 5,
+    "priority": 3,
+    "required": true,
+    "preferred_time": "12:00",
+    "routine": false,
+    "tip": "Give medication at the same time every day and follow your vet's directions."
+  },
+  {
+    "id": "grooming",
+    "group": "grooming",
+    "title": "Grooming",
+    "keywords": [
+      "groom",
+      "grooming",
+      "brush",
+      "brushing",
+      "bath",
+      "nails",
+      "trim",
+      "fur"
+    ],
+    "species": [
+      "any"
+    ],
+    "default_duration": 20,
+    "priority": 1,
+    "required": false,
+    "preferred_time": "16:00",
+    "routine": false,
+    "tip": "Brush short coats weekly and long coats several times a week."
+  },
+  {
+    "id": "vet",
+    "group": "vet",
+    "title": "Vet appointment",
+    "keywords": [
+      "vet",
+      "veterinarian",
+      "appointment",
+      "checkup",
+      "vaccine",
+      "vaccination"
+    ],
+    "species": [
+      "any"
+    ],
+    "default_duration": 60,
+    "priority": 3,
+    "required": true,
+    "preferred_time": "10:00",
+    "routine": false,
+    "tip": "Bring vaccination records and arrive about 10 minutes early."
+  }
+]
